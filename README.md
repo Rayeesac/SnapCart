@@ -26,145 +26,34 @@ It’s designed as a real-world project, developed in a linear and progressive m
 ---
 
 ## 📂 Project Structure
-├── backend
-│   ├── backend
-│   │   ├── asgi.py
-│   │   ├── __init__.py
-│   │   ├── settings.py
-│   │   ├── urls.py
-│   │   └── wsgi.py
-│   ├── base
-│   │   ├── admin.py
-│   │   ├── apps.py
-│   │   ├── __init__.py
-│   │   ├── migrations
-│   │   │   ├── 0001_initial.py
-│   │   │   ├── 0002_order_orderitem_review_shippingaddress.py
-│   │   │   ├── 0003_product_image.py
-│   │   │   └── __init__.py
-│   │   ├── models.py
-│   │   ├── products.py
-│   │   ├── serializers.py
-│   │   ├── signals.py
-│   │   ├── tests.py
-│   │   ├── urls
-│   │   │   ├── order_urls.py
-│   │   │   ├── product_urls.py
-│   │   │   └── user_urls.py
-│   │   └── views
-│   │       ├── order_views.py
-│   │       ├── product_views.py
-│   │       └── user_views.py
-│   ├── db.sqlite3
-│   ├── frontend
-│   │   ├── build
-│   │   │   ├── asset-manifest.json
-│   │   │   ├── favicon.ico
-│   │   │   ├── images
-│   │   │   │   ├── airpods.jpg
-│   │   │   │   ├── alexa.jpg
-│   │   │   │   ├── camera.jpg
-│   │   │   │   ├── mouse.jpg
-│   │   │   │   ├── phone.jpg
-│   │   │   │   ├── playstation.jpg
-│   │   │   │   └── sample.jpg
-│   │   │   ├── index.html
-│   │   │   ├── logo192.png
-│   │   │   ├── logo512.png
-│   │   │   ├── manifest.json
-│   │   │   ├── robots.txt
-│   │   │   └── static
-│   │   │       ├── css
-│   │   │       │   ├── main.4bb19502.chunk.css
-│   │   │       │   └── main.4bb19502.chunk.css.map
-│   │   │       └── js
-│   │   │           ├── 2.23e93b8b.chunk.js
-│   │   │           ├── 2.23e93b8b.chunk.js.LICENSE.txt
-│   │   │           ├── 2.23e93b8b.chunk.js.map
-│   │   │           ├── 3.024b28d9.chunk.js
-│   │   │           ├── 3.024b28d9.chunk.js.map
-│   │   │           ├── main.a989b901.chunk.js
-│   │   │           ├── main.a989b901.chunk.js.map
-│   │   │           ├── runtime-main.18617dd7.js
-│   │   │           └── runtime-main.18617dd7.js.map
-│   │   ├── package.json
-│   │   ├── package-lock.json
-│   │   ├── public
-│   │   │   ├── favicon.ico
-│   │   │   ├── images
-│   │   │   │   ├── airpods.jpg
-│   │   │   │   ├── alexa.jpg
-│   │   │   │   ├── camera.jpg
-│   │   │   │   ├── mouse.jpg
-│   │   │   │   ├── phone.jpg
-│   │   │   │   ├── playstation.jpg
-│   │   │   │   └── sample.jpg
-│   │   │   ├── index.html
-│   │   │   ├── logo192.png
-│   │   │   ├── logo512.png
-│   │   │   ├── manifest.json
-│   │   │   └── robots.txt
-│   │   ├── README.md
-│   │   ├── src
-│   │   │   ├── actions
-│   │   │   │   ├── cartActions.js
-│   │   │   │   ├── orderActions.js
-│   │   │   │   ├── productActions.js
-│   │   │   │   └── userActions.js
-│   │   │   ├── App.js
-│   │   │   ├── bootstrap.min.css
-│   │   │   ├── components
-│   │   │   │   ├── Footer.js
-│   │   │   │   ├── FormContainer.js
-│   │   │   │   ├── Header.js
-│   │   │   │   ├── Loader.js
-│   │   │   │   ├── Message.js
-│   │   │   │   ├── Product.js
-│   │   │   │   └── Rating.js
-│   │   │   ├── constants
-│   │   │   │   ├── cartConstants.js
-│   │   │   │   ├── orderConstants.js
-│   │   │   │   ├── productConstants.js
-│   │   │   │   └── userConstants.js
-│   │   │   ├── index.css
-│   │   │   ├── index.js
-│   │   │   ├── logo.svg
-│   │   │   ├── pages
-│   │   │   │   ├── CartPages.js
-│   │   │   │   ├── CheckoutSteps.js
-│   │   │   │   ├── HomePages.js
-│   │   │   │   ├── LoginPages.js
-│   │   │   │   ├── OrderPages.js
-│   │   │   │   ├── PaymentPages.js
-│   │   │   │   ├── PlaceOrderPages.js
-│   │   │   │   ├── ProductPages.js
-│   │   │   │   ├── ProfilePages.js
-│   │   │   │   ├── RegisterPages.js
-│   │   │   │   └── ShippingPages.js
-│   │   │   ├── products.js
-│   │   │   ├── reducers
-│   │   │   │   ├── cartReducers.js
-│   │   │   │   ├── orderReducers.js
-│   │   │   │   ├── productReducers.js
-│   │   │   │   └── userReducers.js
-│   │   │   ├── reportWebVitals.js
-│   │   │   └── store.js
-│   │   └── yarn.lock
-│   ├── manage.py
-│   ├── requirements.txt
-│   └── static
-│       ├── css
-│       ├── images
-│       │   ├── airpods_fASkfKU.jpg
-│       │   ├── airpods.jpg
-│       │   ├── airpods_oYVARAQ.jpg
-│       │   ├── alexa.jpg
-│       │   ├── camera.jpg
-│       │   ├── mouse.jpg
-│       │   ├── phone.jpg
-│       │   └── playstation.jpg
-│       └── js
 
+SnapCart/
+├── backend/
+│   ├── backend/              # Django core (settings, urls, wsgi, asgi)
+│   ├── base/                 # Main ecommerce app
+│   │   ├── migrations/       # Database migrations
+│   │   ├── models.py         # Product, Order, User models
+│   │   ├── serializers.py    # DRF serializers
+│   │   ├── views/            # order_views, product_views, user_views
+│   │   ├── urls/             # order_urls, product_urls, user_urls
+│   │   └── admin.py, tests.py, signals.py
+│   ├── frontend/             # React frontend
+│   │   ├── public/           # Static assets (images, logos, manifest)
+│   │   ├── src/
+│   │   │   ├── actions/      # cartActions, orderActions, productActions, userActions
+│   │   │   ├── components/   # Header, Footer, Product, Rating, Loader, etc.
+│   │   │   ├── constants/    # Redux constants
+│   │   │   ├── reducers/     # cartReducers, orderReducers, productReducers, userReducers
+│   │   │   ├── pages/        # Cart, Checkout, Home, Login, Order, Payment, Profile, Register, Shipping
+│   │   │   ├── store.js      # Redux store
+│   │   │   └── App.js, index.js, index.css
+│   │   └── package.json, README.md
+│   ├── static/               # CSS, JS, images
+│   ├── db.sqlite3
+│   ├── manage.py
+│   └── requirements.txt
+├── resources/                # Logos, favicons
+└── README.md
 
 ---
 
