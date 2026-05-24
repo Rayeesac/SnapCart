@@ -25,37 +25,38 @@ It’s designed as a real-world project, developed in a linear and progressive m
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
+```bash
 SnapCart/
 ├── backend/
-│   ├── backend/              # Django core (settings, urls, wsgi, asgi)
-│   ├── base/                 # Main ecommerce app
-│   │   ├── migrations/       # Database migrations
-│   │   ├── models.py         # Product, Order, User models
-│   │   ├── serializers.py    # DRF serializers
-│   │   ├── views/            # order_views, product_views, user_views
-│   │   ├── urls/             # order_urls, product_urls, user_urls
+│   ├── backend/          # Django core (settings, urls, wsgi, asgi)
+│   ├── base/             # Ecommerce app
+│   │   ├── migrations/   # Database migrations
+│   │   ├── models.py     # Product, Order, User models
+│   │   ├── serializers.py
+│   │   ├── views/        # order_views, product_views, user_views
+│   │   ├── urls/         # order_urls, product_urls, user_urls
 │   │   └── admin.py, tests.py, signals.py
-│   ├── frontend/             # React frontend
-│   │   ├── public/           # Static assets (images, logos, manifest)
+│   ├── frontend/         # React frontend
+│   │   ├── public/       # Static assets (images, logos, manifest)
 │   │   ├── src/
-│   │   │   ├── actions/      # cartActions, orderActions, productActions, userActions
+│   │   │   ├── actions/      # Redux actions
 │   │   │   ├── components/   # Header, Footer, Product, Rating, Loader, etc.
 │   │   │   ├── constants/    # Redux constants
-│   │   │   ├── reducers/     # cartReducers, orderReducers, productReducers, userReducers
+│   │   │   ├── reducers/     # Redux reducers
 │   │   │   ├── pages/        # Cart, Checkout, Home, Login, Order, Payment, Profile, Register, Shipping
 │   │   │   ├── store.js      # Redux store
 │   │   │   └── App.js, index.js, index.css
 │   │   └── package.json, README.md
-│   ├── static/               # CSS, JS, images
+│   ├── static/           # CSS, JS, images
 │   ├── db.sqlite3
 │   ├── manage.py
 │   └── requirements.txt
-├── resources/                # Logos, favicons
+├── resources/            # Logos, favicons
 └── README.md
+```
 
----
 
 ## ⚙️ Installation
 
